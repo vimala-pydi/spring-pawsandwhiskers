@@ -22,4 +22,30 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <servlet-name>dogs</servlet-name>
+    <servlet-class>servlets.DogsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dogs</servlet-name>
+    <url-pattern>/dogs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <servlet-name>cats</servlet-name>
+    <servlet-class>servlets.CatsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cats</servlet-name>
+    <url-pattern>/cats</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ImageDisplayServlet</servlet-name>
+    <servlet-class>servlets.ImageDisplayServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ImageDisplayServlet</servlet-name>
+    <url-pattern>/ImageDisplayServlet</url-pattern>
+</servlet-mapping>
 </web-app>

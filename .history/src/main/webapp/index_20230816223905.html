@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paws and Whiskers</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="category-box">
+            <form action="ImageDisplayServlet" method="GET">
+                <input type="hidden" name="category" value="cats">
+                <input type="submit" value="Show Paws">
+            </form>
+            <div class="cat-bg"></div>
+        </div>
+        <div class="category-box">
+            <form action="ImageDisplayServlet" method="GET">
+                <input type="hidden" name="category" value="dogs">
+                <input type="submit" value="Show Whiskers">
+            </form>
+            <div class="dog-bg"></div>
+        </div>
+    </div>
+</body>
+</html>

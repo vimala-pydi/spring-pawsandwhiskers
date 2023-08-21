@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Welcome To Paws and Whiskers Web Application !!</title>
+	<script>
+		// Array of dog images
+		let dogs = [];
+
+		// Array of cat images
+		let cats = [];
+
+		// Load dog images
+		function loadDogs() {
+			// AJAX call to get dog images
+			dogs = response;
+		}
+
+		// Load cat images
+		function loadCats() {
+			// AJAX call to get cat images
+			cats = response;
+		}
+
+		// Display images
+		function displayImages() {
+
+			let dogHtml = "";
+			dogs.forEach(url => {
+				dogHtml += `<img src="${url}">`;
+			});
+
+			let catHtml = "";
+			cats.forEach(url => {
+				catHtml += `<img src="${url}">`;
+			});
+		}
+	</script>
+</head>
+
+<body onload="loadImages()">
+	<h1>Welcome To Paws and Whiskers</h1>
+	<div id="auth">
+		<a href="login.html">Login</a>
+		<a href="LogoutServlet">Logout</a>
+	</div>
+	<div id="gallery">
+
+		<div id="dogs">Paws</div>
+
+		<div id="cats">Whiskers</div>
+
+	</div>
+</body>
+
+</html>

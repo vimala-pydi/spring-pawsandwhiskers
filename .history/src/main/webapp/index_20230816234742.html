@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paws and Whiskers</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function showCatsAnimation() {
+            $.ajax({
+                url: 'ImageDisplayServlet',
+                data: { category: 'cats' },
+                success: function(data) {
+                    var images = data.images; // Assuming your servlet returns an object with an "images" array
+                    var container = document.querySelector('.cat-box');
+                    container.innerHTML = '';
+
+                    for (var i = 0; i < images.length; i++) {
+                        var img = document.createElement('img');
+                        img.src = images[i];
+                        container.appendChild(img);
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="category-box cat-box">
+            <button onclick="showCatsAnimation()">Show More</button>
+        </div>
+        <div class="category-box dog-box">
+            <div class="dog-bg"></div>
+        </div>
+    </div>
+</body>
+</html>

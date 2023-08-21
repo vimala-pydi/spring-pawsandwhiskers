@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Display App</title>
+</head>
+<body>
+    <h1>Image Display App</h1>
+    
+    <form action="/ImageDisplayServlet" method="GET">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; padding: 10px;">
+                <h2>Cats</h2>
+                <input type="hidden" name="category" value="cats">
+                <input type="submit" value="Show Cats">
+            </div>
+            <div style="flex: 1; padding: 10px;">
+                <h2>Dogs</h2>
+                <input type="hidden" name="category" value="dogs">
+                <input type="submit" value="Show Dogs">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

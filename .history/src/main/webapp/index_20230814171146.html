@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Welcome To Paws and Whiskers Web Application !!</title>
+		<script>
+			function loadImages() {
+			  var xhr = new XMLHttpRequest();
+			  xhr.open("GET", "/cats", true);
+		
+			  xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4 && xhr.status == 200) {
+				  var response = JSON.parse(xhr.responseText);
+				  
+				  var html = "";
+				  response.forEach(function(url) {
+					html += "<img src='" + url + "'>";
+				  });
+		
+				  document.getElementById("cats").innerHTML = html;
+				}
+			  }  
+			  xhr.send();
+			}		
+		  </script>
+	</head>
+	<body onload="loadImages()">
+		<h1>Welcome To Paws and Whiskers</h1>
+		<div id="auth">
+			<a href="login.html">Login</a>
+			<a href="LogoutServlet">Logout</a>
+		</div>
+		<div id="dogs">
+			<a href="dogs">View Dogs</a>
+		</div>
+		<div id="cats">	
+			<a href="cats">View Cats</a>
+		</div>
+	</body>
+</html>

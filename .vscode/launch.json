@@ -9,7 +9,7 @@
             "name": "Attach",
             "request": "attach",
             "hostName": "localhost",
-            "port": "<debug port of the debuggee>"
+            "port": "8080"
         },
         {
             "type": "chrome",
