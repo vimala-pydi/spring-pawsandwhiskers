@@ -38,6 +38,20 @@ h1 {
     background-position: center center; /* Center the background image */
 }
 
+.image-box.dogs {
+    background-image: url('dog_bg.jpg'); /* Replace with actual dog image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+    height: 100vh; /* Set the height to cover the entire viewport height */
+    justify-content: flex-start; /* Start cat images from the top */
+}
+
+.image-box.cats {
+    background-image: url('cat_bg.jpg'); /* Replace with actual cat image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+    height: 100vh; /* Set the height to cover the entire viewport height */
+    justify-content: flex-start; /* Start cat images from the top */
+}
+
 .image-box h2 {
     margin-top: 0;
     font-size: 24px;
@@ -61,26 +75,15 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer; /* Add cursor style for clickable images */
 }
+
 /* Custom styles for colorful tiles */
 .image-box.dogs {
-    color: #83d4fa; /* White text color for dogs section */
-    background-image: url('dog_bg.jpg'); /* Replace with actual cat image */
+    color: #ff00ff; /* White text color for dogs section */
     animation: slideInLeft 1s ease-in-out; /* Animation for sliding in from the left */
-    height: 100vh;
-    justify-content: center; /* Start cat images from the top */
-    align-items: center; /* Center horizontally */
-    border: 20px solid #83d4fa; /* Unicorn blue border */
-    box-shadow: 0 12px 24px rgba(131, 212, 250, 0.6); /* Unicorn blue shiny box shadow effect */
-    font-size: 24px; /* Set font size to the size of a header 2 */
 }
 
 .image-box.cats {
-    background-image: url('cat_bg.jpg'); /* Replace with actual cat image */
-    height: 100vh; /* Set the height to cover the entire viewport height */
-    justify-content: center; /* Start cat images from the top */
-    color: #ff00ff; /* Unicorn pink text color for cats section */
-    border: 20px solid #ff00ff; /* Unicorn pink border */
-    box-shadow: 0 12px 24px rgba(255, 0, 255, 0.6); /* Unicorn pink shiny box shadow effect */
+    color: #ff00ff; /* White text color for cats section */
     animation: slideInRight 1s ease-in-out; /* Animation for sliding in from the right */
 }
 
