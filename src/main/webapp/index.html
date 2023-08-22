@@ -39,11 +39,12 @@
                     dogList.appendChild(li);
                 });
 
-                imageUrls[1].forEach(url  => {
+                imageUrls[1].forEach((url,index)  => {
                     const li = document.createElement('li');
                     const img = document.createElement('img');
                     img.src = url;
                     img.alt = 'Cat Image';
+                    li.style.backgroundColor = backgroundColors[index % backgroundColors.length]; // Set background color
                     li.appendChild(img);
                     catList.appendChild(li);
                 });
