@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Paws and Whiskers!</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <h1>Paws and Whiskers</h1>
+    <div class="container">
+        <div class="image-box dogs">
+            <h2>Paws</h2>
+            <div id="dogImageContainer">
+                <img id="dogImage" src="" alt="Dog Image">
+            </div>
+        </div>
+        <div class="image-box cats">
+            <h2>Whiskers</h2>
+            <div id="catImageContainer">
+                <img id="catImage" src="" alt="Cat Image">
+            </div>
+        </div>
+    </div>
+    <script>
+        const dogImageContainer = document.getElementById('dogImageContainer');
+        const dogImage = document.getElementById('dogImage');
+        const catImageContainer = document.getElementById('catImageContainer');
+        const catImage = document.getElementById('catImage');
+
+        fetch('ImageDisplayServlet')
+            .then(response => response.json())
+            .then(imageUrls => {
+                const dogImages = imageUrls[0];
+                const catImages = imageUrls[1];
+
+                let currentDogIndex = 0;
+                let currentCatIndex = 0;
+
+                // Function to show the next dog image
+                function showNextDogImage() {
+                    dogImage.src = dogImages[currentDogIndex];
+                    currentDogIndex = (currentDogIndex + 1) % dogImages.length;
+                }
+
+                // Function to show the next cat image
+                function showNextCatImage() {
+                    catImage.src = catImages[currentCatIndex];
+                    currentCatIndex = (currentCatIndex + 1) % catImages.length;
+                }
+
+                // Initially show the first images
+                showNextDogImage();
+                showNextCatImage();
+
+                // Add click event listeners to the containers
+                dogImageContainer.addEventListener('click', showNextDogImage);
+                catImageContainer.addEventListener('click', showNextCatImage);
+            })
+            .catch(error => console.error('Error fetching image URLs:', error));
+    </script>
+</body>
+</html>

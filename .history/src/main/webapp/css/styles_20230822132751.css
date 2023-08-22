@@ -1,0 +1,96 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image-box {
+    width: 48%; /* Set the width to cover 48% of the page */
+    height: 100vh; /* Set the height to cover the entire viewport height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap; /* Allow tiles to wrap within the image box */
+    justify-content: center; /* Center tiles horizontally */
+    align-content: center; /* Center tiles vertically */
+    background-size: cover; /* Set background image to cover the image box */
+    background-position: center center; /* Center the background image */
+}
+
+.image-box.dogs {
+    background-image: url('dog_bg.jpg'); /* Replace with actual dog image */
+}
+
+.image-box.cats {
+    background-image: url('cat_bg.jpg'); /* Replace with actual cat image */
+}
+
+.image-box h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.image-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.image-box li {
+    margin-bottom: 10px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Add cursor style for clickable images */
+}
+
+/* Custom styles for colorful tiles */
+.image-box.dogs {
+    background-color: #f4d942; /* Yellow background color for dogs section */
+    color: #ffffff; /* White text color for dogs section */
+    animation: slideInLeft 1s ease-in-out; /* Animation for sliding in from the left */
+}
+
+.image-box.cats {
+    background-color: #83d4fa; /* Blue background color for cats section */
+    color: #ffffff; /* White text color for cats section */
+    animation: slideInRight 1s ease-in-out; /* Animation for sliding in from the right */
+}
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-list li {
+    width: calc(33.33% - 10px); /* Each dog image takes up one-third of the width minus spacing */
+    background-color: #e0e0e0; /* Set a default background color for tiles */
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

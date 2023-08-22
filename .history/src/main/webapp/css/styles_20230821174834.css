@@ -1,0 +1,57 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(0,0,0,0);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.image-box {
+    width: 45%;
+    padding: 10px;
+    height: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+}
+
+.image-box.dogs {
+    background-size: cover; /* Set background image to cover the entire page */
+    background-position: center center; /* Center the background image */
+    background-image: url('dog_bg.jpg'); /* Replace with actual dog image */
+}
+
+.image-box.cats {
+    background-image: url('cat_bg.jpg'); /* Replace with actual cat image */
+}
+
+.image-box h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.image-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.image-box li {
+    margin-bottom: 10px;
+}
+
+.image-box img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
