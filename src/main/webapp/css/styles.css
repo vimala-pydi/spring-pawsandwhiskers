@@ -10,14 +10,18 @@ body {
     background-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
-    
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
 }
-
-
+h1 {
+    margin-top: 20px; /* Add margin for top spacing */
+}
 .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    flex-grow: 1; /* Expand container to fill available space */
 }
 
 .image-box {
@@ -26,18 +30,21 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap; /* Allow tiles to wrap within the image box */
-    justify-content: center; /* Center tiles horizontally */
-    align-content: center; /* Center tiles vertically */
+    justify-content: flex-start; /* Start tiles from the top */
+    align-content: flex-start; /* Start tiles from the top */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
     background-size: cover; /* Set background image to cover the image box */
     background-position: center center; /* Center the background image */
 }
 
 .image-box.dogs {
     background-image: url('dog_bg.jpg'); /* Replace with actual dog image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
 }
 
 .image-box.cats {
     background-image: url('cat_bg.jpg'); /* Replace with actual cat image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
 }
 
 .image-box h2 {
@@ -55,8 +62,9 @@ body {
 }
 
 .image-box img {
-    width: 100%;
+    width: 100%; /* Make each image the same width */
     height: auto;
+    max-height: 150px; /* Set a fixed height for the images */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer; /* Add cursor style for clickable images */
@@ -87,6 +95,8 @@ body {
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Add padding to make the background box larger */
+    box-sizing: border-box;
 }
 
 .image-list img {
